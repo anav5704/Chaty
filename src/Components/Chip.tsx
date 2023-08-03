@@ -2,7 +2,7 @@ import "../index.css"
 
 function Chip({ name, img, online}: any){
     return (
-        <div className="flex items-center p-2 rounded-md bg-slate-800">
+        <div className="chip flex items-center p-2 rounded-md bg-neutral-800 cursor-pointer">
             <div className={`relative ${online ? "online" : "offline"} `}>
                 <img className="h-10 w-10 object-cover object-center rounded-full overflow-hidden" src={ img } alt="" />
             </div>
@@ -11,4 +11,4 @@ function Chip({ name, img, online}: any){
     )
 }
 
-export default Chip
+export default Chip 

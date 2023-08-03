@@ -4,7 +4,7 @@ import Chats from "../Components/Chats"
 
 function Root(){
     return (
-        <main className="flex bg-amber-50 h-screen w-screen">
+        <main className="flex bg-neutral-900 h-screen w-screen">
             <Chats />
             <Outlet />
         </main>
