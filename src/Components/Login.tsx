@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 function Login(){
     const nav = useNavigate()
     function login(){
-        localStorage.setItem("user", "true")
+        sessionStorage.setItem("user", "true")
         nav("/chat")
     }
 

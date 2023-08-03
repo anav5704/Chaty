@@ -1,10 +1,16 @@
  import Chip from "./Chip"
 import { NavLink } from "react-router-dom"
+import { useState , useEffect} from "react"
 
 function Chats(){
 
+    const [user, setUser]  = useState(false)
+    useEffect(() => {
+        sessionStorage.getItem("user") ? setUser(true) : setUser(false)
+    }, [])
+
     return (
-       localStorage.getItem("user") ? 
+    user ? 
       <nav className="text-white p-3 bg-neutral-800 flex flex-col gap-3">
            <NavLink to="/chat/Prime">
             <Chip 
