@@ -11,7 +11,13 @@ function Chats(){
 
     return (
     user ? 
-      <nav className="text-white p-3 bg-neutral-800 flex flex-col gap-3">
+     <div className="flex flex-col gap-3 p-3 pr-0 min-w-fit ">
+     <div className="text-neutral-900 text-xl font-bold bg-violet-500 p-2 rounded-md h-10v grid place-content-center">
+        <a target="_blank" href="https://github.com/anav5704">
+            <p className="p-2">Chaty by Anav</p>
+        </a>
+     </div>
+      <nav className="text-white p-3 bg-neutral-800 flex flex-col gap-3  rounded-md h-full">
            <NavLink to="/chat/Prime">
             <Chip 
                 name={"Optimus Prime"}
@@ -26,7 +32,9 @@ function Chats(){
                 img={"https://m.media-amazon.com/images/I/816Etq5qEwL._AC_UF894,1000_QL80_.jpg"}
                 />
             </NavLink>
-        </nav> : null 
+        </nav> 
+     </div>
+        : null 
     )
 }
 export default Chats

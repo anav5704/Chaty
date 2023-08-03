@@ -1,6 +1,7 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom"
 import Root from "./Layout/Root"
 import Login from "./Components/Login"
+import ChatForm from "./Components/ChatForm"
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
       <Route path="/" element={ <Root /> }>
         <Route index element={ <Login /> }/>
         <Route path="chat">
-            { Bots.map( bot => <Route path={bot} />)}
+            { Bots.map( bot => <Route path={bot} element={ <ChatForm />}/>)}
         </Route>
       </Route>
     )
