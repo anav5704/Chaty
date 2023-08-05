@@ -12,7 +12,7 @@ function App() {
       <Route path="/" element={ <Root /> }>
         <Route index element={ <Login /> }/>
         <Route path="chat">
-            { Bots.map( bot => <Route path={bot} element={ <ChatForm />}/>)}
+            { Bots.map( (bot, index) => <Route key={ index } path={bot} element={ <ChatForm key={ index } />}/>)}
         </Route>
       </Route>
     )
